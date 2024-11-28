@@ -1,4 +1,5 @@
-exports.getGaleria = (req, res) => {
-    res.send("Gallery datas.");
-  };
-  
+const getGalleria = (req, res) => {
+  res.send("Gallery page")
+};
+
+module.exports = { getGalleria }

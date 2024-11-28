@@ -1,4 +1,5 @@
-exports.getPalyazatok = (req, res) => {
-    res.send("Application data");
-  };
-  
+const getPalyazatok = (req, res) => {
+  res.send("Palyazatok page")
+};
+
+module.exports = { getPalyazatok };
