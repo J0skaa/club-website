@@ -1,4 +1,5 @@
-exports.getKapcsolat = (req, res) => {
-    res.send("Contacts data");
-  };
-  
+const getKapcsolat = (req, res) => {
+  res.send("Connections page")
+};
+
+module.exports = { getKapcsolat }
