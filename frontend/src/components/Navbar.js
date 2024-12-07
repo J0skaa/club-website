@@ -1,23 +1,18 @@
-import React from "react"
-import { Link } from "react-router-dom"
-import "./Navbar.css"
+import React from "react";
+import { NavLink } from "react-router-dom";
+import "./NavBar.css";
 
-const Navbar = () => {
-    return (
-        <nav className="navbar">
-            <ul className="nav-links">
-                <li>
-                    <Link to="/">Főoldal</Link>
-                </li>
-                <li>
-                    <Link to="/kapcsolatok">Kapcsolatok</Link>
-                </li>
-                <li>
-                    <Link to="/palyazatok">Pályázatok</Link>
-                </li>
-            </ul>
-        </nav>
-    );
+const NavBar = () => {
+  return (
+    <div className="navbar">
+      <div className="nav-icon">☰</div>
+      <div className="nav-links">
+        <NavLink to="/main" className="nav-link">Főoldal</NavLink>
+        <NavLink to="/kapcsolatok" className="nav-link">Kapcsolatok</NavLink>
+        <NavLink to="/palyazatok" className="nav-link">Pályázatok</NavLink>
+      </div>
+    </div>
+  );
 };
 
-export default Navbar;
+export default NavBar;

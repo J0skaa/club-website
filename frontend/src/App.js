@@ -9,10 +9,10 @@ import PalyazatokPage from "./pages/PalyazatokPage";
 const App = () => {
   return (
     <Router>
+      <Navbar />
       <Routes>
         <Route path="/" element={<WelcomePage />} />
         <Route path="/main" element={<>
-          <Navbar />
           <HomePage />
         </>} />
         <Route path="/kapcsolatok" element={<>
@@ -20,7 +20,6 @@ const App = () => {
           <ContactPage />
         </>} />
         <Route path="/palyazatok" element={<>
-          <Navbar />
           <PalyazatokPage />
         </>} />
       </Routes>
