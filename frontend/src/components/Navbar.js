@@ -7,7 +7,7 @@ const NavBar = () => {
     <div className="navbar">
       <img src={logo} alt="club-logo" />
       <div className="nav-links">
-        <NavLink to="/main" className="nav-link">
+        <NavLink to="/home" className="nav-link">
           Főoldal
         </NavLink>
         <NavLink to="/kapcsolatok" className="nav-link">

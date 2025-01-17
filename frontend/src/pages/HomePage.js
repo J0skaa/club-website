@@ -1,7 +1,7 @@
 import React from "react";
 
 const HomePage = () => {
-  return <h1></h1>;
+  return <div className="home">Here will be the posts about the Club</div>;
 };
 
 export default HomePage;
