@@ -1,5 +1,4 @@
 import React from "react";
-import "./ContactPage.css";
 
 const contacts = [
   {
@@ -32,7 +31,11 @@ const ContactPage = () => {
       <div className="contacts">
         {contacts.map((contact, index) => (
           <div className="contact-card" key={index}>
-            <img src={contact.image} alt={contact.name} className="contact-image" />
+            <img
+              src={contact.image}
+              alt={contact.name}
+              className="contact-image"
+            />
             <h2>{contact.name}</h2>
             <p>{contact.title}</p>
             <p>

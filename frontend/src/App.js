@@ -12,16 +12,31 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<WelcomePage />} />
-        <Route path="/main" element={<>
-          <HomePage />
-        </>} />
-        <Route path="/kapcsolatok" element={<>
-          <Navbar />
-          <ContactPage />
-        </>} />
-        <Route path="/palyazatok" element={<>
-          <PalyazatokPage />
-        </>} />
+        <Route
+          path="/main"
+          element={
+            <>
+              <HomePage />
+            </>
+          }
+        />
+        <Route
+          path="/kapcsolatok"
+          element={
+            <>
+              <Navbar />
+              <ContactPage />
+            </>
+          }
+        />
+        <Route
+          path="/palyazatok"
+          element={
+            <>
+              <PalyazatokPage />
+            </>
+          }
+        />
       </Routes>
     </Router>
   );
