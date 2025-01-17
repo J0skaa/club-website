@@ -1,10 +1,11 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import logo from "../assets/logo.png";
 
 const NavBar = () => {
   return (
     <div className="navbar">
-      <div className="nav-icon">☰</div>
+      <img src={logo} alt="club-logo" />
       <div className="nav-links">
         <NavLink to="/main" className="nav-link">
           Főoldal

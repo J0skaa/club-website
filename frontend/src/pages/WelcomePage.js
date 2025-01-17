@@ -35,11 +35,6 @@ const WelcomePage = () => {
           className="carousel-image"
         />
       </div>
-      <div className="welcome-content">
-        <h1>Üdvözöllek a Pilisszántó Sportegyesület weboldalán!</h1>
-        <p>Kattints a tovább gombra az oldal megtekintéséhez.</p>
-        <button onClick={handleNavigate}>Tovább</button>
-      </div>
     </div>
   );
 };
