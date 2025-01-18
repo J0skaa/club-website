@@ -1,7 +1,12 @@
 import React from "react";
+import Applications from "../components/Applications";
 
 const ApplicationsPage = () => {
-  return <h1>Pályázatok helye</h1>;
+  return (
+    <div className="application-page">
+      <Applications />
+    </div>
+  );
 };
 
 export default ApplicationsPage;
