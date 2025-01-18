@@ -3,12 +3,13 @@ import axios from "axios";
 
 const Posts = () => {
   const [posts, setPosts] = useState([]);
+  const [expandedPost, setExpandedPost] = useState(null);
 
   useEffect(() => {
     const fetchPosts = async () => {
       try {
         const response = await axios.get("http://localhost:5000/api/posts");
-        setPosts(response.data.reverse());
+        setPosts(response.data);
       } catch (error) {
         console.error("There was an error fetching the posts!", error);
       }
@@ -17,8 +18,12 @@ const Posts = () => {
     fetchPosts();
   }, []);
 
+  const toggleExpand = (postId) => {
+    setExpandedPost((prev) => (prev === postId ? null : postId));
+  };
+
   return (
-    <div className="posts">
+    <div className="posts-container">
       {posts.length === 0 ? (
         <p>No posts available</p>
       ) : (
@@ -33,10 +38,27 @@ const Posts = () => {
             <p>{new Date(post.createdAt).toLocaleDateString()}</p>
             <button
               className="show-content-button"
-              onClick={() => alert(post.content)}
+              onClick={() => toggleExpand(post._id)}
             >
-              Read more
+              {expandedPost === post._id ? "Kevesebb" : "Bővebben"}
             </button>
+            {expandedPost === post._id && (
+              <div className="post-content">
+                <p>{post.content}</p>
+                {post.link && (
+                  <p>
+                    Link:{" "}
+                    <a
+                      href={post.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {post.link}
+                    </a>
+                  </p>
+                )}
+              </div>
+            )}
           </div>
         ))
       )}

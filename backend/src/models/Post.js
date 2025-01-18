@@ -14,6 +14,11 @@ const postSchema = new mongoose.Schema(
       type: Date,
       default: Date.now,
     },
+
+    link: {
+      type: String,
+      required: false,
+    },
   },
   { timestamps: true }
 );

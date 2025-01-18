@@ -2,13 +2,12 @@ const express = require("express");
 const mongoose = require("mongoose");
 const Post = require("./models/Post");
 const cors = require("cors");
+const app = express();
 
 const PORT = process.env.PORT || 5000;
 
 MONGO_URI =
   "mongodb+srv://j0ska:pilisszantose101@jozsef-cluster.1tx92.mongodb.net/?retryWrites=true&w=majority&appName=jozsef-cluster";
-
-const app = express();
 
 app.use(express.json());
 app.use(cors());
@@ -37,13 +36,13 @@ app.listen(PORT, () => {
 
 app.post("/api/posts", async (req, res) => {
   try {
-    const { title, content } = req.body;
+    const { title, content, link } = req.body;
 
     if (!title || !content) {
       return res.status(400).json({ message: "Title and content required" });
     }
 
-    const newPost = new Post({ title, content });
+    const newPost = new Post({ title, content, link });
     await newPost.save();
 
     res.status(201).json(newPost);
