@@ -1,7 +1,7 @@
 import React from "react";
 
-const PalyazatokPage = () => {
+const ApplicationsPage = () => {
   return <h1>Pályázatok helye</h1>;
 };
 
-export default PalyazatokPage;
+export default ApplicationsPage;

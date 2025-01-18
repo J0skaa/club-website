@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 import WelcomePage from "./pages/WelcomePage";
 import HomePage from "./pages/HomePage";
 import ContactPage from "./pages/ContactPage";
-import PalyazatokPage from "./pages/PalyazatokPage";
+import ApplicationsPage from "./pages/ApplicationsPage";
 
 const App = () => {
   return (
@@ -33,7 +33,7 @@ const App = () => {
           path="/palyazatok"
           element={
             <>
-              <PalyazatokPage />
+              <ApplicationsPage />
             </>
           }
         />
