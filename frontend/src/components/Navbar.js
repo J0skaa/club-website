@@ -17,6 +17,9 @@ const NavBar = () => {
         <NavLink to="/palyazatok" className="nav-link">
           Pályázatok
         </NavLink>
+        <NavLink to="/csapatok" className="nav-link">
+          Csapatok
+        </NavLink>
       </div>
     </div>
   );

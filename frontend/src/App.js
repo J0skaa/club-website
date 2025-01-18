@@ -5,6 +5,7 @@ import WelcomePage from "./pages/WelcomePage";
 import HomePage from "./pages/HomePage";
 import ContactPage from "./pages/ContactPage";
 import ApplicationsPage from "./pages/ApplicationsPage";
+import TeamsPage from "./pages/TeamsPage";
 
 const App = () => {
   return (
@@ -34,6 +35,14 @@ const App = () => {
           element={
             <>
               <ApplicationsPage />
+            </>
+          }
+        />
+        <Route
+          path="/csapatok"
+          element={
+            <>
+              <TeamsPage />
             </>
           }
         />
