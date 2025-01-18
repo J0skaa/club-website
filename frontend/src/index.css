@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(to right, #000080, white, #000080); /* White center, blue edges */
+    background: white;
     color: #000080; 
   }
   
@@ -28,26 +28,20 @@ body {
   .navbar img {
     position: absolute;
     left: 20px;
-    height: 60px;
-    animation: wave 2s infinite ease-in-out;
+    height: 70px;
+    animation: wave 5s infinite ease-in-out;
     transform-origin: left center;
   }
 
   @keyframes wave {
     0% {
-      transform: rotate(0deg) translateX(0);
-    }
-    25% {
-    transform: rotate(-2deg) translateX(1px);
+      transform: rotate(0deg)
     }
     50% {
-    transform: rotate(1deg) translateX(-1px);
-    }
-    75% {
-    transform: rotate(-1deg) translateX(1px);
+      transform: rotate(1deg)
     }
     100% {
-    transform: rotate(0deg) translateX(0);
+      transform: rotate(0deg)
     }
   }
 
@@ -167,8 +161,8 @@ body {
   .posts-container {
     display: flex;
     flex-direction: column;
-    gap: 70px;
-    padding: 10px;
+    gap: 100px;
+    padding: 20px;
   }
 
   .post {
@@ -179,6 +173,7 @@ body {
     margin: 0 auto;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
   }
 
   .post:hover {
@@ -186,7 +181,28 @@ body {
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
   }
 
-  .expand-button {
+  .post h3 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .post p {
+    font-size: 1.4rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+
+  .post img {
+   display: block;
+   margin: 0 auto;
+   max-width: 60%;
+   height: auto; 
+  }
+
+   .expand-button {
   display: block;
   margin: 10px auto;
   padding: 10px 20px;
@@ -204,35 +220,3 @@ body {
 .expand-button:hover {
   background-color: #0056b3;
 }
-
-  .post h3 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 10px;
-  }
-
-  .post p {
-    font-size: 1.4rem;
-    color: #666;
-    line-height: 1.6;
-    margin-bottom: 15px;
-  }
-
-  .post img {
-   display: block;
-   margin: 0 auto;
-   max-width: 60%;
-   height: auto; 
-  }
-
-  .post .link {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 0.9rem;
-    transition: color 0.3s ease;
-  }
-
-  .post .link:hover {
-    color: #0056b3;
-  }

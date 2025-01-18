@@ -37,7 +37,7 @@ const Posts = () => {
             />
             <p>{new Date(post.createdAt).toLocaleDateString()}</p>
             <button
-              className="show-content-button"
+              className="expand-button"
               onClick={() => toggleExpand(post._id)}
             >
               {expandedPost === post._id ? "Kevesebb" : "Bővebben"}
