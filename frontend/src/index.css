@@ -29,6 +29,26 @@ body {
     position: absolute;
     left: 20px;
     height: 60px;
+    animation: wave 2s infinite ease-in-out;
+    transform-origin: left center;
+  }
+
+  @keyframes wave {
+    0% {
+      transform: rotate(0deg) translateX(0);
+    }
+    25% {
+    transform: rotate(-2deg) translateX(1px);
+    }
+    50% {
+    transform: rotate(1deg) translateX(-1px);
+    }
+    75% {
+    transform: rotate(-1deg) translateX(1px);
+    }
+    100% {
+    transform: rotate(0deg) translateX(0);
+    }
   }
 
   .nav-links {
@@ -147,14 +167,16 @@ body {
   .posts-container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    padding: 20px;
+    gap: 70px;
+    padding: 10px;
   }
 
   .post {
     background-color: #f9f9f9;
     border-radius: 8px;
-    padding: 20px;
+    padding: 15px;
+    max-width: 500px;
+    margin: 0 auto;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
@@ -184,13 +206,13 @@ body {
 }
 
   .post h3 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: #333;
     margin-bottom: 10px;
   }
 
   .post p {
-    font-size: 1rem;
+    font-size: 1.4rem;
     color: #666;
     line-height: 1.6;
     margin-bottom: 15px;
@@ -199,7 +221,7 @@ body {
   .post img {
    display: block;
    margin: 0 auto;
-   max-width: 100%;
+   max-width: 60%;
    height: auto; 
   }
 
@@ -207,6 +229,7 @@ body {
     color: #007bff;
     text-decoration: none;
     font-weight: bold;
+    font-size: 0.9rem;
     transition: color 0.3s ease;
   }
 
