@@ -4,7 +4,7 @@ import useFetch from "../useFetch";
 const Posts = () => {
   const [expandedPost, setExpandedPost] = useState(null);
 
-  const { data: posts } = useFetch("http://localhost:5000/api/posts");
+  const { data: posts, error } = useFetch("http://localhost:5000/api/posts");
 
   const toggleExpand = (postId) => {
     setExpandedPost((prev) => (prev === postId ? null : postId));
@@ -12,8 +12,10 @@ const Posts = () => {
 
   return (
     <div className="posts-container">
-      {posts.length === 0 ? (
-        <p>No posts available</p>
+      {error ? (
+        <div>An error occurred: {error}</div>
+      ) : !posts ? (
+        <div>Loading...</div>
       ) : (
         posts.map((post) => (
           <div className="post" key={post._id}>
