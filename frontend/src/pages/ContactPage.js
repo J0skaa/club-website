@@ -3,7 +3,7 @@ import Contacts from "../components/Contacts";
 
 const ContactPage = () => {
   return (
-    <div className="contac-page">
+    <div className="contact-page">
       <Contacts />
     </div>
   );
