@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const Post = require("./models/Post");
 const Application = require("./models/Application");
+const Contacts = require("./models/Contact");
 const cors = require("cors");
 const app = express();
 
@@ -37,6 +38,16 @@ app.get("/api/applications", async (req, res) => {
     res.json(applications);
   } catch (error) {
     console.error("Error fetching posts", error);
+    res.status(500).json({ message: "Internal Server Error" });
+  }
+});
+
+app.get("/api/contacts", async (req, res) => {
+  try {
+    const contacts = await Contacts.find();
+    res.json(contacts);
+  } catch (error) {
+    console.error("Erorr fetching posts", error);
     res.status(500).json({ message: "Internal Server Error" });
   }
 });
