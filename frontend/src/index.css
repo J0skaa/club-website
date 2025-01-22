@@ -270,3 +270,15 @@ body {
 .application-link:hover {
   color: #0056b3;
 }
+
+.field-location-widget {
+  border: 1px solid #ddd;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  max-width: 400px;
+}
+
+.map-container iframe {
+  border-radius: 8px;
+}
