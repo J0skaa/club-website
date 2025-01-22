@@ -5,7 +5,6 @@ const WelcomePage = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const navigate = useNavigate();
 
-  // Képek elérési útjának módosítása
   const images = [
     "/assets/image1.JPG",
     "/assets/image2.JPG",

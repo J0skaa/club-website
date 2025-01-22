@@ -1,22 +1,10 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+import useFetch from "../useFetch";
 
 const Posts = () => {
-  const [posts, setPosts] = useState([]);
   const [expandedPost, setExpandedPost] = useState(null);
 
-  useEffect(() => {
-    const fetchPosts = async () => {
-      try {
-        const response = await axios.get("http://localhost:5000/api/posts");
-        setPosts(response.data);
-      } catch (error) {
-        console.error("There was an error fetching the posts!", error);
-      }
-    };
-
-    fetchPosts();
-  }, []);
+  const { data: posts } = useFetch("http://localhost:5000/api/posts");
 
   const toggleExpand = (postId) => {
     setExpandedPost((prev) => (prev === postId ? null : postId));
