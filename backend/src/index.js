@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const Post = require("./models/Post");
+const Application = require("./models/Application");
 const cors = require("cors");
 const app = express();
 
@@ -24,6 +25,16 @@ app.get("/api/posts", async (req, res) => {
   try {
     const posts = await Post.find().sort({ date: -1 }).limit(3);
     res.json(posts);
+  } catch (error) {
+    console.error("Error fetching posts", error);
+    res.status(500).json({ message: "Internal Server Error" });
+  }
+});
+
+app.get("/api/applications", async (req, res) => {
+  try {
+    const applications = await Application.find().sort({ date: -1 });
+    res.json(applications);
   } catch (error) {
     console.error("Error fetching posts", error);
     res.status(500).json({ message: "Internal Server Error" });
