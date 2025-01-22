@@ -22,10 +22,6 @@ const WelcomePage = () => {
     return () => clearInterval(interval);
   }, [images.length]);
 
-  const handleNavigate = () => {
-    navigate("/main");
-  };
-
   return (
     <div className="welcome-container">
       <div className="carousel">
