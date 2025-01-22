@@ -4,7 +4,10 @@ import useFetch from "../useFetch";
 const Posts = () => {
   const [expandedPost, setExpandedPost] = useState(null);
 
-  const { data: posts, error } = useFetch("http://localhost:5000/api/posts");
+  const { data, error } = useFetch("http://localhost:5000/api/posts");
+  const posts = data
+    ? data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
+    : [];
 
   const toggleExpand = (postId) => {
     setExpandedPost((prev) => (prev === postId ? null : postId));

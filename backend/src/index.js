@@ -24,7 +24,7 @@ mongoose
 
 app.get("/api/posts", async (req, res) => {
   try {
-    const posts = await Post.find().sort({ date: -1 }).limit(3);
+    const posts = await Post.find();
     res.json(posts);
   } catch (error) {
     console.error("Error fetching posts", error);
