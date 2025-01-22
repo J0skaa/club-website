@@ -6,10 +6,14 @@ import WeatherWidget from "../components/WeatherWidget";
 const HomePage = () => {
   return (
     <div className="home">
-      <h1>Üdvözlünk a Pilisszántó Sportegyesület weboldalán!</h1>
-      <Posts />
-      <FieldLocationWidget />
-      <WeatherWidget />
+      <div className="posts-container">
+        <h1>Üdvözlünk a Pilisszántó Sportegyesület weboldalán!</h1>
+        <Posts />
+      </div>
+      <div className="widgets-container">
+        <FieldLocationWidget />
+        <WeatherWidget />
+      </div>
     </div>
   );
 };
