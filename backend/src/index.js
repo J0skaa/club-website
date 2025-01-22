@@ -1,3 +1,4 @@
+require("dotenv").config({ path: __dirname + "/../.env" });
 const express = require("express");
 const mongoose = require("mongoose");
 const Post = require("./models/Post");
@@ -8,8 +9,7 @@ const app = express();
 
 const PORT = process.env.PORT || 5000;
 
-MONGO_URI =
-  "mongodb+srv://j0ska:pilisszantose101@jozsef-cluster.1tx92.mongodb.net/?retryWrites=true&w=majority&appName=jozsef-cluster";
+const MONGO_URI = process.env.MONGO_URI;
 
 app.use(express.json());
 app.use(cors());
