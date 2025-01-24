@@ -7,7 +7,6 @@ const HomePage = () => {
   return (
     <div className="home">
       <div className="posts-container">
-        <h1>Üdvözlünk a Pilisszántó Sportegyesület weboldalán!</h1>
         <Posts />
       </div>
       <div className="widgets-container">
